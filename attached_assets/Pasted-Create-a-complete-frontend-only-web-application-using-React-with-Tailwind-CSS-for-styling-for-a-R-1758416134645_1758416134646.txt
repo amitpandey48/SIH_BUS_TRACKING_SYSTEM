@@ -1,0 +1,57 @@
+Create a complete frontend-only web application using React (with Tailwind CSS for styling) for a "Real-Time Bus Tracking System". The system has two roles: **Authority (Bus Conductor/Driver)** and **User (Passenger)**. No backend or validation is required for now, just forms, navigation, and working buttons.
+
+### Key Requirements:
+
+1. **Mobile-First & Responsive**
+   - The entire web app must be **mobile-friendly first** and then scale well to desktop.
+   - Buttons, forms, and cards should be touch-friendly with enough spacing.
+   - Use responsive Tailwind classes so all layouts adjust perfectly to small screens.
+   - Navigation menus and forms should look clean and easy on mobile devices.
+
+2. **Landing Page**
+   - Clean, modern UI with two large buttons:  
+     - "Authority Login"  
+     - "User Login / Signup"
+   - Centered content, optimized for mobile screens.
+   - Responsive design (works smoothly on desktop & mobile).
+
+3. **Authority Flow**
+   - **Authority Login Page:**
+     - Form with fields: `Bus Number`, `Phone Number`, `Password`, and a large "Login" button.
+     - On clicking login → redirect directly to "Authority Dashboard" (no validation).
+   - **Authority Dashboard:**
+     - Show Bus Details: `Bus Number`, `Route`, `Seats`, `Timing`, `Traffic Updates`, `Live Location`.
+     - Each detail should be in a card or section with an **edit/update button** (mock only).
+     - Layout should be simple and scrollable on mobile.
+
+4. **User Flow**
+   - **User Login / Signup Page:**
+     - Signup form with: `Name`, `Phone Number`, `Password`.
+     - Login form with: `Phone Number`, `Password`.
+     - On clicking login or signup → redirect directly to "User Dashboard" (no validation).
+   - **User Dashboard:**
+     - Search bar at the top with **Starting Point** and **Destination** input fields.
+     - Show results in responsive cards with:  
+       `Bus Number`, `Route`, `Seats Available`, `Timing`, `Traffic`, `Live Location`.
+     - Each bus card must include a **"Prebook Seat" button** (button should work by showing a mock confirmation alert or modal).
+     - All buttons must be fully clickable and functional for navigation/mock actions.
+
+5. **General**
+   - Use **Tailwind CSS** for clean, modern, mobile-friendly styling.
+   - Use **React Router** for navigation between pages.
+   - Use **mock data** for buses (at least 5 sample buses with details).
+   - Include a **navbar** with app name ("Bus Tracker") and a "Logout" button.
+   - Smooth transitions between pages.
+   - Every button should be clickable and lead to its respective page or show mock interaction (no dead buttons).
+
+### Deliverables:
+- Full React project with components for:
+  - Landing Page
+  - Authority Login
+  - Authority Dashboard
+  - User Login / Signup
+  - User Dashboard
+- Mobile-first design (optimized for small screens).
+- Proper routing with working buttons.
+- Mock JSON for bus data.
+- Buttons should trigger navigation or simple alerts (no backend).
