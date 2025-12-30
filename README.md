@@ -45,13 +45,13 @@ This README explains how to set up, run, and extend the project, including how t
 ### 1️⃣ Install frontend dependencies  
 *(root contains frontend `package.json`)*
 
-```bash
+```
 npm install
 2️⃣ Install server dependencies
-bash
-Copy code
+---
 cd server
 npm install
+---
 🔐 Environment
 Copy or edit server/.env
 
@@ -67,31 +67,32 @@ NODE_ENV
 Seed the database with the included example buses
 (this clears existing bus documents)
 
-bash
-Copy code
+---
 cd server
 npm run seed
+---
 🧪 Development — Running the App
 Run the server (dev mode, uses tsx watcher)
-bash
-Copy code
+---
 cd server
 npm run dev
+---
 Run the frontend (Vite) from repo root
-bash
-Copy code
+---
 npm run dev
+---
+
 🏗️ Building / Preview
 Build frontend
-bash
-Copy code
+
 npm run build
 Build server and run (if needed)
-bash
-Copy code
+
 cd server
 npm run build
 npm start
+
+
 🗺️ How the Map Is Added
 Libraries: leaflet and react-leaflet
 (see dependencies in root package.json)
@@ -148,8 +149,6 @@ Server (seeded data)
 Update server/src/scripts/seed.ts
 Then run:
 
-bash
-Copy code
 npm run seed
 🔌 API Notes
 Backend models are defined in
@@ -162,8 +161,6 @@ or expand routes.ts as needed.
 🧪 Testing
 Server includes:
 
-bash
-Copy code
 npm run test-api
 Runs a small script test-api.js to exercise endpoints.
 
@@ -186,3 +183,4 @@ MIT — see package.json for license field
 
 ❓ Questions?
 Ask here or open an issue — happy to help. 🚀
+
