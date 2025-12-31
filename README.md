@@ -3,9 +3,15 @@
 A compact, frontend-focused bus tracking demo using **React**, **Tailwind CSS**, **Leaflet** (via `react-leaflet`), and a minimal **Express + MongoDB** backend.  
 This README explains how to set up, run, and extend the project, including how the map is integrated and how to add bus data.
 
----
+## Theme : Governance
 
-## 📌 Project Summary
+## Team Details
+1. Aniket Jain (Team Leader)
+2. Sarwan Upadhyay
+3. Amit Pandey
+4. Sarthak Bora
+
+##  Project Summary
 
 - **Frontend:** React + Vite, located in the workspace root.  
   Components and pages are under [`client/src`](client/src).
@@ -17,9 +23,7 @@ This README explains how to set up, run, and extend the project, including how t
   Mongoose models in [`server/src/models.ts`](server/src/models.ts#L1).  
   Scripted seeding available at [`server/src/scripts/seed.ts`](server/src/scripts/seed.ts#L1).
 
----
-
-## ✨ Features
+##  Features
 
 - Live-looking map with markers and popups showing seat availability and traffic  
 - Tile switcher (OSM / Carto Positron / Stamen Toner)  
@@ -30,148 +34,132 @@ This README explains how to set up, run, and extend the project, including how t
   `POST /api/buses/:id/book` (created to prevent race conditions)  
 - UI components use **React Query**, so updates propagate across pages in real time
 
----
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 - Node.js (16+ recommended) and `npm` or `pnpm`
 - MongoDB running locally  
   *(or provide a remote URI in `server/.env`)*
 
----
+##  Quick Start — Install
 
-## 🚀 Quick Start — Install
-
-### 1️⃣ Install frontend dependencies  
+# 1. Install frontend dependencies  
 *(root contains frontend `package.json`)*
 
-```
 npm install
-2️⃣ Install server dependencies
----
-cd server
-npm install
----
-🔐 Environment
-Copy or edit server/.env
+# 2. Install server dependencies
+
+- cd server
+- npm install
+
+
+# 3. Environment
+- Copy or edit server/.env
 
 Set:
-
 MONGODB_URI (default included)
-
 PORT (defaults to 5000)
-
 NODE_ENV
 
-🌱 Seeding the Database
-Seed the database with the included example buses
+# 4. Seeding the Database
+- Seed the database with the included example buses
 (this clears existing bus documents)
 
----
-cd server
-npm run seed
----
-🧪 Development — Running the App
-Run the server (dev mode, uses tsx watcher)
----
-cd server
-npm run dev
----
-Run the frontend (Vite) from repo root
----
-npm run dev
----
+- cd server
+- npm run seed
 
-🏗️ Building / Preview
-Build frontend
+# 5. Development — Running the App
+- Run the server (dev mode, uses tsx watcher)
+  
+- cd server
+- npm run dev
 
-npm run build
+- Run the frontend (Vite) from repo root
+
+- npm run dev
+
+
+# 6.Building / Preview
+- Build frontend
+
+- npm run build
 Build server and run (if needed)
 
-cd server
+- cd server
 npm run build
 npm start
 
-
-🗺️ How the Map Is Added
-Libraries: leaflet and react-leaflet
+# 7. How the Map Is Added
+- Libraries:
+leaflet and react-leaflet
 (see dependencies in root package.json)
 The component imports leaflet/dist/leaflet.css for map styles.
 
-Component:
+- Component:
 MapComponent
 (client/src/components/MapComponent.tsx)
 Renders MapContainer, TileLayer, Marker, and Popup.
 
-Tiles:
+- Tiles:
 Default uses OpenStreetMap tiles, with options to switch to
 Carto Positron or Stamen Toner.
 
-Markers & Icons:
+- Markers & Icons:
 Custom divIcons show availability color and bus ID suffix.
 Includes a fix for Leaflet’s icon image URLs to work with bundlers.
 
-Data:
+- Data:
 When not provided via props, MapComponent uses mockBuses from
 client/src/data/mockBuses.ts.
 Each bus includes latitude and longitude fields.
 
-Fit & Update:
+- Fit & Update:
 A small internal MapUpdater uses useMap() to fit bounds to current markers when locations change.
 
-🧾 Adding or Updating Bus Data
+# 8. Adding or Updating Bus Data
 Frontend (mock data)
 Edit client/src/data/mockBuses.ts
 
-Each object should include:
+### Each object should include:<br>
 
-number
+a. number<br>
+b. route<br>
+c. seats<br>
+d. available<br>
+e. timing<br>
+f. traffic<br>
+g. location<br>
+h. trafficStatus (light | moderate | heavy)<br>
+i. latitude<br>
+j. longitude<br>
 
-route
-
-seats
-
-available
-
-timing
-
-traffic
-
-location
-
-trafficStatus (light | moderate | heavy)
-
-latitude
-
-longitude
-
-Server (seeded data)
+- Server (seeded data)<br>
 Update server/src/scripts/seed.ts
-Then run:
-
+- Then run:<br>
 npm run seed
-🔌 API Notes
+
+- API Notes<br>
 Backend models are defined in
 server/src/models.ts
 
-Add endpoints in
+- Add endpoints in: <br>
 server/src/routes.ts
 or expand routes.ts as needed.
 
-🧪 Testing
-Server includes:
+# 9. Testing
+### Server includes:
 
-npm run test-api
+-npm run test-api
 Runs a small script test-api.js to exercise endpoints.
 
-🔮 Possible Improvements / Next Steps
-Add marker clustering (e.g., leaflet.markercluster)
+# 10. Possible Improvements / Next Steps
+- Add marker clustering (e.g., leaflet.markercluster)
 
-Add live updates using WebSockets or Server-Sent Events
+- Add live updates using WebSockets or Server-Sent Events
 
-Add route polylines and vehicle headings for richer visualization
+- Add route polylines and vehicle headings for richer visualization
 
-🤝 Contributing
+# 11. Contributing
 PRs welcome
 
 Follow the repo style
@@ -183,4 +171,5 @@ MIT — see package.json for license field
 
 ❓ Questions?
 Ask here or open an issue — happy to help. 🚀
+
 
