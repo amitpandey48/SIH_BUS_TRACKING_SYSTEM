@@ -1,9 +1,9 @@
-# 🚌 Smart Transportation (bus-tracker)
+# 🚌 Smart Transportation (bus-tracker) ( https://demo-project-zeta-blush.vercel.app/)
 
 A compact, frontend-focused bus tracking demo using **React**, **Tailwind CSS**, **Leaflet** (via `react-leaflet`), and a minimal **Express + MongoDB** backend.  
 This README explains how to set up, run, and extend the project, including how the map is integrated and how to add bus data.
 
-## Theme : Governance
+## Theme : Governance 
 
 ## Team Details
 1. Aniket Jain (Team Leader)
@@ -171,5 +171,6 @@ MIT — see package.json for license field
 
 ❓ Questions?
 Ask here or open an issue — happy to help. 🚀
+
 
 
