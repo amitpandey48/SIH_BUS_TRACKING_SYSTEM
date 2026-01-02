@@ -1,5 +1,5 @@
 
-# 🚀 Raahi Punjab – Round 2 Implementation Plan
+# 🚌 Smart Transportation (bus-tracker) – Round 2 Implementation Plan
 
 This document outlines the **enhancements and implementations planned for Round 2** of the hackathon, building upon the Round 1 prototype.
 
