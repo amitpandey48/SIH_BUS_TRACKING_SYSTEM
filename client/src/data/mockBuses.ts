@@ -7,6 +7,7 @@ export interface Bus {
   traffic: string;
   location: string;
   trafficStatus: 'light' | 'moderate' | 'heavy';
+
 }
 
 export const mockBuses: Bus[] = [
