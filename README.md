@@ -4,6 +4,17 @@ A compact, frontend-focused bus tracking demo using **React**, **Tailwind CSS**,
 This README explains how to set up, run, and extend the project, including how the map is integrated and how to add bus data.
 
 ## Theme : Governance 
+## Problem Statement
+In tier-2 and tier-3 cities, public bus transport systems lack real-time tracking and digital monitoring. Commuters face unpredictable bus arrival times, overcrowding, and long waiting periods, which leads to inconvenience and loss of trust in public transport. Due to this uncertainty, many people prefer private vehicles, increasing traffic congestion, fuel consumption, and environmental pollution.
+
+Most existing transport solutions are designed for metro cities and rely on expensive GPS hardware and high-bandwidth infrastructure, making them unsuitable for smaller cities.
+
+There is a strong need for a low-cost, scalable, and easy-to-adopt digital solution that can provide real-time bus location, estimated arrival times, and seat availability, while working efficiently in low-bandwidth environments and using minimal infrastructure.
+
+##Solution
+We propose a mobile and cloud-based real-time bus tracking system for tier-2 and tier-3 cities. The system has three components: a Conductor App that uses the conductor’s smartphone as a GPS tracker and enables digital ticketing, an Authority Dashboard to monitor buses, routes, and live locations, and a Passenger App/Web that shows real-time bus availability, ETA, and seat status.
+
+The solution uses a Node.js backend to synchronize live data across all users, is low-cost, works in low-bandwidth environments, and can be deployed quickly without expensive GPS hardware—making public transport more reliable, efficient, and commuter-friendly.
 
 ## Team Details
 1. Aniket Jain (Team Leader)
@@ -159,18 +170,6 @@ Runs a small script test-api.js to exercise endpoints.
 
 - Add route polylines and vehicle headings for richer visualization
 
-# 11. Contributing
-PRs welcome
-
-Follow the repo style
-
-Add tests where appropriate
-
-📄 License
-MIT — see package.json for license field
-
-❓ Questions?
-Ask here or open an issue — happy to help. 🚀
 
 
 
