@@ -11,7 +11,7 @@ Most existing transport solutions are designed for metro cities and rely on expe
 
 There is a strong need for a low-cost, scalable, and easy-to-adopt digital solution that can provide real-time bus location, estimated arrival times, and seat availability, while working efficiently in low-bandwidth environments and using minimal infrastructure.
 
-##Solution
+## Solution
 We propose a mobile and cloud-based real-time bus tracking system for tier-2 and tier-3 cities. The system has three components: a Conductor App that uses the conductor’s smartphone as a GPS tracker and enables digital ticketing, an Authority Dashboard to monitor buses, routes, and live locations, and a Passenger App/Web that shows real-time bus availability, ETA, and seat status.
 
 The solution uses a Node.js backend to synchronize live data across all users, is low-cost, works in low-bandwidth environments, and can be deployed quickly without expensive GPS hardware—making public transport more reliable, efficient, and commuter-friendly.
@@ -169,6 +169,7 @@ Runs a small script test-api.js to exercise endpoints.
 - Add live updates using WebSockets or Server-Sent Events
 
 - Add route polylines and vehicle headings for richer visualization
+
 
 
 
